@@ -24,15 +24,28 @@ def ui_csv_livro(livro)
 end
 
 def ui_add_livro
-	puts "Titulo :"
+	system("clear")
+	puts " Adicionando Livro ao estoque = = = = = = = = = = = \n"
+	#[0]
+	puts "\n|Titulo :"
 	titulo = gets.strip
-	puts "Ano de Lançamento :"
+	#[1]
+	puts "|Ano de Lançamento :"
 	ano = gets.strip
-	puts "Preço :"
+	#[2]
+	puts "|Preço :"
 	preco = gets.strip
-	puts "Quantidade :"
-	quant = gets.strip
-	puts "Reimpressao (S/N) :"
+	#[3]
+	puts "|Reimpressao (S/N) :"
 	reimpressao = gets.upcase.strip
+	#[4]
+	puts "|Quantidade :"
+	quant = gets.strip
 	[titulo,ano,preco,reimpressao,quant]
+end
+
+def ui_next_enter
+	puts "\n Pressione Enter para voltar..."
+	gets
+	system("clear")
 end
